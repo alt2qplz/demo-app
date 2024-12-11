@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/", // указывает на папку, в которую будут собраны скомпилированные файлы. Не важна, так как мы используем вебпак
+    "noImplicitAny": true, // сообщает TypeScript о неявном типе any, чтобы предотвратить его использование
+    "module": "ESNext", // определяет, какой модульный формат будет использоваться
+    "target": "es5", // указывает, для какой версии ECMAScript будет компилироваться код
+    "jsx": "react-jsxdev", // указывает, как использовать JSX синтаксис в файлах TSX
+    "allowJs": true, // позволяет использовать JavaScript файлы в проекте
+    "moduleResolution": "node", // определяет, каким образом TypeScript будет разрешать импорты модулей (в 99% node)
+    "esModuleInterop": true, // Позволяет использовать commonjs и esModuleInterop вместе
+    "allowSyntheticDefaultImports": true, // Позволяет игнорировать отсутствие ключевого слова `default` в импортируемых модулях
+    "baseUrl": ".",
+    "strict": true, // строгий режим тайпскрипт
+    "paths": {
+      "*": ["./src/*"] // все абсолютные импорты будут идти из папки src
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "src",
+    "./config/jest/setupTests.ts"
+  ]
+}

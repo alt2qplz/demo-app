@@ -1,0 +1,39 @@
+.Sidebar {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height));
+  background: var(--inverted-bg-color);
+  position: relative;
+  transition: width 0.2s;
+  flex-shrink: 0;
+}
+
+.switchers {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.collapseBtn {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapse);
+
+  .switchers {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,28 @@
+@import "reset";
+@import "fonts";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
+@import "themes/orange";
+
+body {
+  font: var(--font-m);
+  color: var(--primary-color);
+}
+
+.app {
+  min-height: 100vh; // минимальная высота приложения
+  background: var(--bg-color);
+}
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 16px 16px 16px 48px;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+  width: 100%;
+}
