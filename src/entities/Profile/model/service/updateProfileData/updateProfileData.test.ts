@@ -8,6 +8,7 @@ const data = {
   country: Country.RU,
   age: 29,
   lastname: 'Last',
+  id: '1'
 };
 
 describe('updateProfileData.test', () => {

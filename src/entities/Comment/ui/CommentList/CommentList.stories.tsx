@@ -20,7 +20,7 @@ Normal.args = {
     {
       id: '1',
       user: {
-        id: 1,
+        id: '1',
         avatar: AvatarImg,
         username: 'username'
       },
@@ -29,11 +29,17 @@ Normal.args = {
     {
       id: '2',
       user: {
-        id: 2,
+        id: '2',
         avatar: AvatarImg,
         username: 'username 2'
       },
       text: 'Это комментарий 2'
     }
   ]
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  comments: [],
+  isLoading: true,
 };

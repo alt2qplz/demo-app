@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect } from 'react';
+import React, { memo, useCallback } from 'react';
 import cls from './ProfilePage.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader';
@@ -21,6 +21,8 @@ import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
+import { useParams } from 'react-router-dom';
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -38,6 +40,7 @@ const ProfilePage = memo((props: ProfilePageProps) => {
   const isLoading = useSelector(getProfileIsLoading);
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getProfileValidateErrors);
+  const { id }  = useParams<{ id: string }>();
 
   const validateErrorTranslates = {
     [ValidateProfileError.NO_DATA]: t('Нет данных профиля'),
@@ -47,9 +50,9 @@ const ProfilePage = memo((props: ProfilePageProps) => {
     [ValidateProfileError.INCORRECT_USER_DATA]: t('Некорректное значение имени'),
   };
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') dispatch(fetchProfileData());
-  }, [dispatch]);
+  useInitialEffect(() => {
+    if (id) dispatch(fetchProfileData(id));
+  });
 
   const onChangeFirstname = useCallback((value = '') => {
     dispatch(profileActions.updateForm({ first: value }));

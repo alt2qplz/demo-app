@@ -89,46 +89,89 @@
       "id": "1",
       "text": "Я стану Хокаге !!1!",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "2",
       "text": "ХАХА, тебе придется сильно постараться!",
       "articleId": "1",
-      "userId": "2"
+      "userId": "3"
     },
     {
       "id": "3",
       "text": "Ну и что?! Я ГОТОВ КО ВСЕМУ!",
       "articleId": "1",
-      "userId": "1"
+      "userId": "2"
+    },
+    {
+      "text": "Текст",
+      "articleId": "1",
+      "userId": "1",
+      "id": "5Mz2rct"
+    },
+    {
+      "text": "Hello",
+      "articleId": "1",
+      "userId": "1",
+      "id": "peZvgPM"
     }
   ],
   "users": [
     {
       "id": "1",
-      "username": "admin",
+      "username": "alpha",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEswpk4QUqpLP68_LDh13QJHlXuPA2Px8GPQ&s"
+      "avatar": "https://sun9-44.userapi.com/impg/e0dVFHD1nF1EyGgrXB1mgK80HNM3jVSGI42xRA/-73zQ9e4Idw.jpg?size=745x745&quality=95&sign=a24dcfb397fbef4cbcd7d7c6a0b600b1&type=album"
     },
     {
       "id": "2",
-      "username": "user",
+      "username": "naruto",
+      "password": "123",
+      "role": "USER",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEswpk4QUqpLP68_LDh13QJHlXuPA2Px8GPQ&s"
+    },
+    {
+      "id": "3",
+      "username": "rockLi",
       "password": "123",
       "role": "USER",
       "avatar": "https://static1.srcdn.com/wordpress/wp-content/uploads/2017/03/Rock-Lee-in-Naruto.jpg"
     }
   ],
-  "profile": {
-    "id": "1",
-    "first": "asd",
-    "lastname": "Porter",
-    "age": 29,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "KZN",
-    "username": "ALT2QPLZ",
-    "avatar": "https://sun9-44.userapi.com/impg/e0dVFHD1nF1EyGgrXB1mgK80HNM3jVSGI42xRA/-73zQ9e4Idw.jpg?size=745x745&quality=95&sign=a24dcfb397fbef4cbcd7d7c6a0b600b1&type=album"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Alpha",
+      "lastname": "Hatsuseno",
+      "age": 29,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "KZN",
+      "username": "ALT2QPLZ",
+      "avatar": "https://sun9-44.userapi.com/impg/e0dVFHD1nF1EyGgrXB1mgK80HNM3jVSGI42xRA/-73zQ9e4Idw.jpg?size=745x745&quality=95&sign=a24dcfb397fbef4cbcd7d7c6a0b600b1&type=album"
+    },
+    {
+      "id": "2",
+      "first": "Naruto",
+      "lastname": "Uzumaki",
+      "age": 14,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "KZN",
+      "username": "Naruto",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEswpk4QUqpLP68_LDh13QJHlXuPA2Px8GPQ&s"
+    },
+    {
+      "id": "3",
+      "first": "Rock",
+      "lastname": "Li",
+      "age": 14,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "KZN",
+      "username": "RockLi",
+      "avatar": "https://static1.srcdn.com/wordpress/wp-content/uploads/2017/03/Rock-Lee-in-Naruto.jpg"
+    }
+  ]
 }

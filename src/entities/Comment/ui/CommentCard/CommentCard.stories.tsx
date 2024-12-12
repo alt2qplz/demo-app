@@ -18,10 +18,20 @@ Normal.args = {
   comment: {
     id: '1',
     user: {
-      id: 1,
+      id: '1',
       avatar: AvatarImg,
       username: 'username'
     },
     text: 'Это комментарий'
   }
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  comment: {
+    id: '1',
+    text: 'hello world',
+    user: { id: '1', username: 'Vasya' },
+  },
+  isLoading: true,
 };

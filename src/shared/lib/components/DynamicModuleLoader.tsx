@@ -16,6 +16,9 @@ interface DynamicModuleLoaderProps {
 }
 
 export const DynamicModuleLoader: React.FC<DynamicModuleLoaderProps> = (props) => {
+  const {
+    removeAfterUnmount = true
+  } = props;
   const store = useStore() as ReduxStoreWithReducerManager;
   const dispatch = useDispatch();
 
@@ -26,7 +29,7 @@ export const DynamicModuleLoader: React.FC<DynamicModuleLoaderProps> = (props) =
     });
 
     return () => {
-      if (props.removeAfterUnmount) {
+      if (removeAfterUnmount) {
         Object.entries(props.reducers).forEach(([name]) => {
           store.reducerManager.remove(name as StateSchemaKey);
           dispatch({ type: `@REMOVE ${name} FORM` }); // remove срабатывает на след диспатч, так стейт обновляется только при диспатче

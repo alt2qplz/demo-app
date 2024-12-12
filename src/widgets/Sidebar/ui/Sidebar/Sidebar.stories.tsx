@@ -17,7 +17,7 @@ export const SidebarLight = Template.bind({});
 SidebarLight.decorators = [StoreDecorator({
   user: {
     authData: {
-      id: 1,
+      id: '1',
       username: 'name'
     }
   }
@@ -29,7 +29,7 @@ SidebarDark.decorators = [
   StoreDecorator({
     user: {
       authData: {
-        id: 1,
+        id: '1',
         username: 'name'
       }
     }
