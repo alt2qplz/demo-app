@@ -37,3 +37,9 @@ Normal.args = {
     }
   ]
 };
+
+export const Loading = Template.bind({});
+Loading.args = {
+  comments: [],
+  isLoading: true,
+};
