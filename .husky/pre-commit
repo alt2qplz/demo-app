@@ -12,6 +12,6 @@
 #}
 
 time {
-  npm run lint:scss &
-  npm run lint:ts
+  npm run lint:scss:fix &
+  npm run lint:ts:fix --quiet
 }
