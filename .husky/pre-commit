@@ -13,5 +13,5 @@
 
 time {
   npm run lint:scss:fix &
-  npm run lint:ts:fix --quiet
+  npm run lint:ts:fix
 }
