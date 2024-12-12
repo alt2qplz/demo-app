@@ -5,12 +5,16 @@ import { Button } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useSelector } from 'react-redux';
-import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
+import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { getUserAuthData } from 'entities/User';
 
 export const ProfilePageHeader = memo(() => {
   const { t } = useTranslation('profile');
   const readonly = useSelector(getProfileReadonly);
+  const authData = useSelector(getUserAuthData);
+  const profileData = useSelector(getProfileData);
+  const canEdit = authData?.id === profileData?.id;
   const dispatch = useAppDispatch();
 
   const edit = useCallback(() => {
@@ -24,6 +28,12 @@ export const ProfilePageHeader = memo(() => {
   const onSave = useCallback(() => {
     dispatch(updateProfileData());
   }, [dispatch]);
+
+  if (!canEdit) return (
+    <div className={classNames(cls.ProfilePageHeader, {}, [])}>
+      <Text title={t('Профиль')}/>
+    </div>
+  );
 
   return (
     <div className={classNames(cls.ProfilePageHeader, {}, [])}>

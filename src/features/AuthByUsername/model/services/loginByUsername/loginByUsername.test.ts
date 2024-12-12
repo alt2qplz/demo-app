@@ -4,7 +4,7 @@ import { loginByUsername } from './loginByUsername';
 
 describe('loginByUsername.test', () => {
   test('success login', async () => {
-    const userValue = { username: '123', id: 1 }; // значение возвращаемое с сервера
+    const userValue = { username: '123', id: '1' }; // значение возвращаемое с сервера
 
     const thunk = new TestAsyncThunk(loginByUsername); // инстанс класса для тестов асинхронных thunk
     thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));

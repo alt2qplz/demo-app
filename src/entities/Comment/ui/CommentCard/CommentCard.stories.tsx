@@ -18,7 +18,7 @@ Normal.args = {
   comment: {
     id: '1',
     user: {
-      id: 1,
+      id: '1',
       avatar: AvatarImg,
       username: 'username'
     },
