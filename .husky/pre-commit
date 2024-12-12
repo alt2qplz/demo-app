@@ -11,5 +11,7 @@
 #  npm run test:ui:ci
 #}
 
-npm run lint:scss &
-npm run lint:ts
+time {
+  npm run lint:scss &
+  npm run lint:ts
+}
