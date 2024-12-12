@@ -102,6 +102,12 @@
       "text": "Ну и что?! Я ГОТОВ КО ВСЕМУ!",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "text": "Текст",
+      "articleId": "1",
+      "userId": "1",
+      "id": "5Mz2rct"
     }
   ],
   "users": [
