@@ -120,15 +120,28 @@
       "avatar": "https://static1.srcdn.com/wordpress/wp-content/uploads/2017/03/Rock-Lee-in-Naruto.jpg"
     }
   ],
-  "profile": {
-    "id": "1",
-    "first": "asd",
-    "lastname": "Porter",
-    "age": 29,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "KZN",
-    "username": "ALT2QPLZ",
-    "avatar": "https://sun9-44.userapi.com/impg/e0dVFHD1nF1EyGgrXB1mgK80HNM3jVSGI42xRA/-73zQ9e4Idw.jpg?size=745x745&quality=95&sign=a24dcfb397fbef4cbcd7d7c6a0b600b1&type=album"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Dane",
+      "lastname": "Porter",
+      "age": 29,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "KZN",
+      "username": "ALT2QPLZ",
+      "avatar": "https://sun9-44.userapi.com/impg/e0dVFHD1nF1EyGgrXB1mgK80HNM3jVSGI42xRA/-73zQ9e4Idw.jpg?size=745x745&quality=95&sign=a24dcfb397fbef4cbcd7d7c6a0b600b1&type=album"
+    },
+    {
+      "id": "2",
+      "first": "Morn",
+      "lastname": "Lager",
+      "age": 29,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "KZN",
+      "username": "DaneMorn",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEswpk4QUqpLP68_LDh13QJHlXuPA2Px8GPQ&s"
+    }
+  ]
 }
