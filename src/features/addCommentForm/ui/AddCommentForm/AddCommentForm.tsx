@@ -12,9 +12,9 @@ import {
   getAddCommentFormError,
   getAddCommentFormText
 } from '../../model/selectors/addCommentFormSelectors';
-import { sendComment } from '../../model/serices/sendComment/sendComment';
 
-interface AddCommentFormProps {
+export interface AddCommentFormProps {
+  onSendComment: (value: string) => void;
   className?: string;
 }
 
@@ -30,8 +30,11 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
   }, [dispatch]);
 
   const onSendComment = useCallback(() => {
-    dispatch(sendComment());
-  }, [dispatch]);
+    if (text) {
+      props.onSendComment(text);
+      dispatch(addCommentFormActions.setText(''));
+    }
+  }, [dispatch, props, text]);
 
   return (
     <DynamicModuleLoader reducers={{ addCommentForm: addCommentFormReducer }}>
@@ -42,7 +45,10 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
           onChange={onChangeCommentFormText}
           className={cls.input}
         />
-        <Button onClick={onSendComment}>
+        <Button
+          onClick={onSendComment}
+          disabled={!text}
+        >
           {t('Отправить')}
         </Button>
       </div>
