@@ -1,13 +1,12 @@
-import { memo, useMemo, useState } from 'react';
+import { memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { Button, ButtonSize } from 'shared/ui/Button/Button';
-import { sidebarItems } from '../../model/items';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'entities/User';
+import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 
 interface SidebarProps {
   className?: string;
@@ -15,13 +14,7 @@ interface SidebarProps {
 
 export const Sidebar = memo((props: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
-  const isAuth = useSelector(getUserAuthData);
-
-  const filteredSidebarItems = useMemo(() => {
-    return sidebarItems.filter((el) => {
-      return !(el.authOnly && !isAuth);
-    });
-  }, [isAuth]);
+  const sidebarItems = useSelector(getSidebarItems);
 
   const toggleCollapse = () => { setCollapsed(prev => !prev); };
 
@@ -41,7 +34,7 @@ export const Sidebar = memo((props: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
-        {filteredSidebarItems.map(item => {
+        {sidebarItems.map(item => {
           return <SidebarItem item={item} key={item.link} collapsed={collapsed}/>;
         })}
       </div>
