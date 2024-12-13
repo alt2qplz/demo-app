@@ -52,6 +52,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'no-undef': 'off',
     'object-curly-spacing': ['error', 'always'],
+    'react/no-array-index-key': 'off',
   },
   globals: {
     __IS_DEV__: true,
@@ -60,7 +61,7 @@ module.exports = {
   },
   overrides: [
     {
-      'files': ['*.test.tsx', '*.test.ts'], // ??? почему не работает регулярка то?
+      'files': ['**/*test.ts', '**/*test.tsx'], // ??? почему не работает регулярка то?
       'rules': {
         'i18next/no-literal-string': 'off'
       }

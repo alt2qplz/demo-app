@@ -2,7 +2,6 @@ import { Profile, ProfileSchema, ValidateProfileError } from '../types/profile';
 import { profileActions, profileReducer } from './profileSlice';
 import { Country } from 'entities/Country';
 import { updateProfileData } from 'entities/Profile';
-import { StateSchema } from 'app/providers/StoreProvider';
 
 describe('loginSlice', () => {
   const state: ProfileSchema = {
