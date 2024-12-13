@@ -10,27 +10,21 @@ jobs:
         node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+      - name: Install modules
         run: npm ci
-      - name: lint ts
+      - name: Lint TypeScript
         run: npm run lint:ts
-        if: always()
-      - name: lint scss
+      - name: Lint SCSS
         run: npm run lint:scss
-        if: always()
-      - name: test
+      - name: Run unit tests
         run: npm run test:unit
-        if: always()
-      - name: build
+      - name: Build project
         run: npm run build:prod
-        if: always()
-      - name: storybook build
+      - name: Build Storybook
         run: npm run storybook:build
-        if: always()
-      - name: loki test
+      - name: Run Loki tests
         run: npm run test:ui:ci
-        if: always()
