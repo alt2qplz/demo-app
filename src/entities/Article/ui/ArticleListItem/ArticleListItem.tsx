@@ -27,7 +27,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
   const navigate = useNavigate();
 
   const onOpenArticle = useCallback(() => {
-    navigate(routePath.article + article.id);
+    navigate(`${routePath.article}/${article.id}`);
   }, [article.id, navigate]);
 
   const types = <Text text={article.type.join(', ')} className={cls.types} />;
@@ -54,9 +54,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           <Text title={article.title} className={cls.title} />
           {types}
           <img src={article.img} className={cls.img} alt={article.title} />
-          {textBlock && (
-            <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
-          )}
+          {textBlock && <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />}
           <div className={cls.footer}>
             <Button onClick={onOpenArticle} theme="outline">
               {t('Читать далее...')}
