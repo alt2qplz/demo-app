@@ -27,6 +27,7 @@ export type StateSchemaKey = keyof StateSchema;
 export interface ReducerManager {
   getReducerMap: () => ReducersMapObject<StateSchema>,
   reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
+  checkHasReducer: (key: StateSchemaKey) => boolean
   add: (key: StateSchemaKey, reducer: Reducer) => void
   remove: (key: StateSchemaKey) => void
 }
