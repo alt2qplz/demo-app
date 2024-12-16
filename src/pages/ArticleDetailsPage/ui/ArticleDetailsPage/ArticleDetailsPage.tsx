@@ -19,7 +19,7 @@ import { Button } from 'shared/ui/Button/Button';
 import { routePath } from 'shared/config/routeConfig/routeConfig';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { addCommentForArticle } from '../../model/services/addCommntForArticle/addCommntForArticle';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page';
 
 interface ArticleDetailsPageProps {
   className?: string;

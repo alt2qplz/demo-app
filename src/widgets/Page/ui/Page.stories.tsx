@@ -4,14 +4,12 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Page } from './Page';
 
 export default {
-  title: 'shared/Page',
+  title: 'widget/Page',
   component: Page,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Page>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof Page> = (args) => <Page {...args}><div/></Page>;
 
 export const Normal = Template.bind({});
 Normal.args = {};
