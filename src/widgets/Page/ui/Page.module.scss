@@ -1,7 +1,15 @@
 .Page {
   flex-grow: 1;
-  padding: 20px 20px 20px 45px;
+  padding: 16px 16px 16px 40px;
   height: calc(100vh - var(--navbar-height));
   overflow-y: auto;
   flex-shrink: 100;
+}
+
+.trigger {
+  height: 16px;
+}
+
+.clearBottomPadding {
+  padding-bottom: 0;
 }
