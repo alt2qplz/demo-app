@@ -14,7 +14,7 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix --quiet",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix --quiet",
-    "test:unit": "jest --config ./config/jest/jest.config.ts --maxWorkers=1",
+    "test:unit": "jest --config ./config/jest/jest.config.ts --maxWorkers=50%",
     "test:loki": "npx loki test",
     "test:loki:upd": "npx loki --requireReference --reactUri file:./storybook-static update",
     "test:ui": "npm run storybook:build && npm run test:ui:ci",
