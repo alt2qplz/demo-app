@@ -1,27 +1,6 @@
 @font-face {
   font-family: consolas;
-  src: url("shared/assets/fonts/consola.woff2") format("truetype");
+  src: url("../../shared/assets/fonts/consolas.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: consolas;
-  src: url("shared/assets/fonts/consolab.woff2") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: consolas;
-  src: url("shared/assets/fonts/consolai.woff2") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: consolas;
-  src: url("shared/assets/fonts/consolaz.woff2") format("truetype");
-  font-weight: bold;
-  font-style: italic;
 }
