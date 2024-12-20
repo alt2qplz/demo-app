@@ -24,15 +24,17 @@ export const DynamicModuleLoader: React.FC<DynamicModuleLoaderProps> = (props) =
 
   useEffect(() => {
     Object.entries(props.reducers).forEach(([name, reducer]) => {
-      store.reducerManager.add(name as StateSchemaKey, reducer);
-      dispatch({ type: `@INIT ${name} FORM` });
+      if (!store.reducerManager.checkHasReducer(name as StateSchemaKey)) {
+        store.reducerManager.add(name as StateSchemaKey, reducer);
+        dispatch({ type: `@INIT ${name} reducer` });
+      }
     });
 
     return () => {
       if (removeAfterUnmount) {
         Object.entries(props.reducers).forEach(([name]) => {
           store.reducerManager.remove(name as StateSchemaKey);
-          dispatch({ type: `@REMOVE ${name} FORM` }); // remove срабатывает на след диспатч, так стейт обновляется только при диспатче
+          dispatch({ type: `@REMOVE ${name} reducer` }); // remove срабатывает на след диспатч, так стейт обновляется только при диспатче
         });
       }
     };

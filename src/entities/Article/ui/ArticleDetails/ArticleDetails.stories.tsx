@@ -8,7 +8,7 @@ import { ArticleDetails } from './ArticleDetails';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 
 export default {
-  title: 'entities/ArticleDetails',
+  title: 'entities/Article/ArticleDetails',
   component: ArticleDetails,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -25,6 +25,10 @@ const article: Article = {
   views: 1022,
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
+  user: {
+    id: '1',
+    username: 'Ulbi tv',
+  },
   blocks: [
     {
       id: '1',
