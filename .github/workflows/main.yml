@@ -16,15 +16,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install modules
         run: npm ci
-      - name: Lint TypeScript
-        run: npm run lint:ts
-      - name: Lint SCSS
-        run: npm run lint:scss
+#      - name: Lint TypeScript lint on commit
+#        run: npm run lint:ts
+#      - name: Lint SCSS
+#        run: npm run lint:scss
       - name: Run unit tests
         run: npm run test:unit
       - name: Build project
         run: npm run build:prod
-      - name: Build Storybook
-        run: npm run storybook:build
-      - name: Run Loki tests
-        run: npm run test:ui:ci
+#      - name: Build Storybook loki screens on push
+#        run: npm run storybook:build
+#      - name: Run Loki tests
+#        run: npm run test:ui:ci
