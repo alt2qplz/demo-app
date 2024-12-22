@@ -10,7 +10,8 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'ru', // язык по умолчанию
-    debug: __IS_DEV__, // глобальная переменная
+    // debug: __IS_DEV__, // глобальная переменная
+    debug: false, // no console spam
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     }

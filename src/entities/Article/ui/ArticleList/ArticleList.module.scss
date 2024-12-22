@@ -1,0 +1,11 @@
+.BIG {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.SMALL {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
