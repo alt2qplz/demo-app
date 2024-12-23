@@ -4,11 +4,15 @@
   background: var(--inverted-bg-color);
   display: flex;
   align-items: center;
-  padding: 20px;
 }
 
 .links {
   margin-left: auto;
   display: flex;
   gap: 16px;
+}
+
+.appName {
+  width: var(--sidebar-width);
+  padding-left: 16px;
 }

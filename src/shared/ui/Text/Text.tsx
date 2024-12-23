@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
-type TextTheme = 'default' | 'error'
+type TextTheme = 'default' | 'error' | 'inverted'
 type TextAlign = 'left' | 'center' | 'right';
 type TextSize = 'size_m' | 'size_l'
 
