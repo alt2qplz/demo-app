@@ -1,3 +1,6 @@
 export {
   ArticleDetailsPageAsync as ArticleDetailsPage,
 } from './ui/ArticleDetailsPage/ArticleDetailsPage.async';
+
+export { ArticleDetailsPageSchema } from './model/types/index';
+export { ArticleDetailsRecommendationsSchema } from './model/types/ArticleDetailsRecommendationsSchema';

@@ -6,6 +6,9 @@ import { articlesPageActions } from '../../slices/articlesPageSlice';
 jest.mock('../fetchArticlesList/fetchArticlesList');
 jest.mock('../../slices/articlesPageSlice');
 
+// Пример использования
+const params = new URLSearchParams('search=mockedValue');
+
 describe('initArticlesPage.test', () => {
   test('success', async () => {
     const thunk = new TestAsyncThunk(initArticlesPage, {
@@ -20,10 +23,10 @@ describe('initArticlesPage.test', () => {
       },
     });
 
-    await thunk.callThunk();
+    await thunk.callThunk(params);
 
-    expect(thunk.dispatch).toBeCalledTimes(4);
-    expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
+    expect(thunk.dispatch).toBeCalledTimes(5);
+    expect(fetchArticlesList).toHaveBeenCalledWith({});
     expect(articlesPageActions.initState).toBeCalledTimes(1);
   });
 
@@ -40,7 +43,7 @@ describe('initArticlesPage.test', () => {
       },
     });
 
-    await thunk.callThunk();
+    await thunk.callThunk(params);
 
     expect(thunk.dispatch).toBeCalledTimes(2);
     expect(fetchArticlesList).not.toHaveBeenCalled();
