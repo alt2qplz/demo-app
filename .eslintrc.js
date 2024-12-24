@@ -25,7 +25,8 @@ module.exports = {
     '@typescript-eslint',
     'jsx-a11y',
     'i18next',
-    'react-hooks'
+    'react-hooks',
+    'demo-app-fsd'
   ],
   rules: {
     '@typescript-eslint/no-empty-function': 'off',
@@ -53,6 +54,7 @@ module.exports = {
     'no-undef': 'off',
     'object-curly-spacing': ['error', 'always'],
     'react/no-array-index-key': 'off',
+    'demo-app-fsd/path-checker': 'error'
   },
   globals: {
     __IS_DEV__: true,

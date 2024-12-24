@@ -1,6 +1,6 @@
 import { validateProfileData } from './validateProfileData';
 import { Country } from 'entities/Country';
-import { ValidateProfileError } from 'entities/Profile';
+import { ValidateProfileError } from '../../types/profile';
 
 const profile = {
   first: 'Name',
