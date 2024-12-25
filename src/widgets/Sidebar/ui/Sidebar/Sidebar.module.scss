@@ -5,6 +5,7 @@
   position: relative;
   transition: width 0.2s;
   flex-shrink: 0;
+  padding-left: 16px;
 }
 
 .switchers {
@@ -26,8 +27,6 @@
 .items {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin: 16px;
 }
 
 .collapsed {

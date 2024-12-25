@@ -1,5 +1,4 @@
 import React, { memo, useCallback } from 'react';
-import cls from './ProfilePageHeader.module.scss';
 import { Text } from 'shared/ui/Text/Text';
 import { Button } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +7,7 @@ import { useSelector } from 'react-redux';
 import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
+import { HStack } from 'shared/ui/Stack';
 
 export const ProfilePageHeader = memo(() => {
   const { t } = useTranslation('profile');
@@ -30,13 +30,13 @@ export const ProfilePageHeader = memo(() => {
   }, [dispatch]);
 
   if (!canEdit) return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [])}>
+    <HStack max justify="between" className={classNames('', {}, [])}>
       <Text title={t('Профиль')}/>
-    </div>
+    </HStack>
   );
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [])}>
+    <HStack max justify="between" className={classNames('', {}, [])}>
       <Text title={t('Профиль')}/>
       {readonly
         ? (
@@ -44,17 +44,17 @@ export const ProfilePageHeader = memo(() => {
             {t('Редактировать')}
           </Button>
         ) : (
-          <div className={cls['btn-group']}>
+          <HStack gap="8">
             <Button onClick={onSave}>
               {t('Сохранить')}
             </Button>
             <Button onClick={cancelEdit} theme={'danger'}>
               {t('Отменить')}
             </Button>
-          </div>
+          </HStack>
         )
       }
-    </div>
+    </HStack>
   );
 });
 

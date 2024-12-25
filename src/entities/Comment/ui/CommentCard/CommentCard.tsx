@@ -7,6 +7,7 @@ import cls from './CommentCard.module.scss';
 import { Comment } from '../../model/types/comment';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { routePath } from 'shared/config/routeConfig/routeConfig';
+import { VStack } from 'shared/ui/Stack';
 
 interface CommentCardProps {
     className?: string;
@@ -19,13 +20,13 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
+      <VStack gap="8" max className={classNames(cls.CommentCard, {}, [className, cls.loading])}>
         <div className={cls.header}>
           <Skeleton width={30} height={30} border="50%" />
           <Skeleton height={16} width={100} className={cls.username} />
         </div>
         <Skeleton className={cls.text} width="100%" height={50} />
-      </div>
+      </VStack>
     );
   }
 
