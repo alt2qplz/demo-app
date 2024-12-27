@@ -76,7 +76,7 @@ module.exports = {
   },
   overrides: [
     {
-      'files': ['**/*test.ts', '**/*test.tsx'], // ??? почему не работает регулярка то?
+      'files': ['**/*test.ts', '**/*test.tsx', '**/*.stories.*'], // ??? почему не работает регулярка то?
       'rules': {
         'i18next/no-literal-string': 'off'
       }

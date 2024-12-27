@@ -4,14 +4,13 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { HStack } from '../Stack';
 import cls from './ListBox.module.scss';
 import DoneIcon from 'shared/assets/icons/done-20-20.svg';
+import { DropdownDirection } from 'shared/types/ui';
 
 export interface ListBoxItem {
   value: string;
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownDirection = 'top' | 'bottom';
 
 interface ListBoxProps {
   items?: ListBoxItem[];
@@ -25,12 +24,14 @@ interface ListBoxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-  bottom: cls.optionsBottom,
-  top: cls.optionsTop,
+  'bottom left': cls.optionsBottomLeft,
+  'bottom right': cls.optionsBottomRight,
+  'top right': cls.optionsTopRight,
+  'top left': cls.optionsTopLeft,
 };
 
 export function ListBox(props: ListBoxProps) {
-  const { className, items, value, defaultValue, onChange, readonly, direction = 'bottom', label } = props;
+  const { className, items, value, defaultValue, onChange, readonly, direction = 'bottom right', label } = props;
 
   const [selected, setSelected] = useState<ReactNode>(defaultValue);
 
