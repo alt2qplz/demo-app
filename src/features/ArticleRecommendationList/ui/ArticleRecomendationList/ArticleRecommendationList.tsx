@@ -15,7 +15,7 @@ export const ArticleRecommendationList = memo((props: ArticleRecommendationListP
   const { t } = useTranslation();
   const { isLoading, data: articles, error } = useArticleRecommendationsList(3);
 
-  if (error) return null;
+  if (error || isLoading) return null;
 
   return (
     <VStack gap={'8'} className={classNames('', {}, [className])}>
@@ -24,7 +24,6 @@ export const ArticleRecommendationList = memo((props: ArticleRecommendationListP
         title={t('Рекомендуем')}
       />
       <ArticleList
-        isLoading={isLoading}
         articles={articles}
         target="_blank"
       />
