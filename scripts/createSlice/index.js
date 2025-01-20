@@ -9,7 +9,7 @@ if (shortLayerNames.includes(layer)) {
   const layersMap = {
     p: 'pages',
     w: 'widgets',
-    f: 'feature',
+    f: 'features',
     e: 'entities'
   };
 
