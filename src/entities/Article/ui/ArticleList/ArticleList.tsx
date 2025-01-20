@@ -36,7 +36,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   const isBig = view === ArticleView.BIG;
 
   const itemsPerRow = isBig ? 1 : 5;
-  const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
+  const rowCount = isBig ? articles?.length : Math.ceil(articles.length / itemsPerRow);
 
   const rowRender = (listRowProps: ListRowProps) => {
     const items = [];
