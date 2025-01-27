@@ -76,12 +76,44 @@ export const ProfileCard = memo((props: ProfileCardProps) => {
             <Avatar src={data?.avatar} size={200}/>
           </HStack>
       }
-      <Input value={data?.first} placeholder={t('Имя')} readonly={readonly} onChange={onChangeFirstname}/>
-      <Input value={data?.lastname} placeholder={t('Фамилия')} readonly={readonly} onChange={onChangeLastname}/>
-      <Input value={data?.city} placeholder={t('Город')} readonly={readonly} onChange={onChangeCity}/>
-      <Input value={data?.age} placeholder={t('Возраст')} readonly={readonly} onChange={onChangeAge}/>
-      <Input value={data?.username} placeholder={t('Имя пользователя')} readonly={readonly} onChange={onChangeUsername}/>
-      <Input value={data?.avatar} placeholder={t('Ссылка на аватар')} readonly={readonly} onChange={onChangeAvatar}/>
+      <Input
+        value={data?.first}
+        placeholder={t('Имя')}
+        readonly={readonly}
+        onChange={onChangeFirstname}
+        data-testid="ProfileCard.firstname"
+      />
+      <Input
+        value={data?.lastname}
+        placeholder={t('Фамилия')}
+        readonly={readonly}
+        onChange={onChangeLastname}
+        data-testid="ProfileCard.lastname"
+      />
+      <Input
+        value={data?.city}
+        placeholder={t('Город')}
+        readonly={readonly}
+        onChange={onChangeCity}
+      />
+      <Input
+        value={data?.age}
+        placeholder={t('Возраст')}
+        readonly={readonly}
+        onChange={onChangeAge}
+      />
+      <Input
+        value={data?.username}
+        placeholder={t('Имя пользователя')}
+        readonly={readonly}
+        onChange={onChangeUsername}
+      />
+      <Input
+        value={data?.avatar}
+        placeholder={t('Ссылка на аватар')}
+        readonly={readonly}
+        onChange={onChangeAvatar}
+      />
       <CountrySelect
         value={data?.country}
         onChange={onChangeCountry}
