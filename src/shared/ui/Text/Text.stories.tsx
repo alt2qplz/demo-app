@@ -72,3 +72,17 @@ SizeL.args = {
   size: 'size_l'
 };
 SizeL.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+  title: 'Title lorem ipsun',
+  text: 'Description Description Description Description',
+  size: 'size_m',
+};
+
+export const SizeS = Template.bind({});
+SizeS.args = {
+  title: 'Title lorem ipsun',
+  text: 'Description Description Description Description',
+  size: 'size_s',
+};

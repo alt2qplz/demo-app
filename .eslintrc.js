@@ -25,7 +25,8 @@ module.exports = {
     '@typescript-eslint',
     'jsx-a11y',
     'i18next',
-    'react-hooks'
+    'react-hooks',
+    'demo-app-fsd'
   ],
   rules: {
     '@typescript-eslint/no-empty-function': 'off',
@@ -43,7 +44,20 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'theme', 'align', 'size', 'target'],
+        ignoreAttribute: [
+          'as',
+          'role',
+          'data-testid',
+          'to',
+          'theme',
+          'align',
+          'size',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap'
+        ],
       },
     ],
     'jsx-a11y/click-events-have-key-events': 'off',
@@ -53,6 +67,7 @@ module.exports = {
     'no-undef': 'off',
     'object-curly-spacing': ['error', 'always'],
     'react/no-array-index-key': 'off',
+    'demo-app-fsd/path-checker': 'error'
   },
   globals: {
     __IS_DEV__: true,
@@ -61,7 +76,7 @@ module.exports = {
   },
   overrides: [
     {
-      'files': ['**/*test.ts', '**/*test.tsx'], // ??? почему не работает регулярка то?
+      'files': ['**/*test.ts', '**/*test.tsx', '**/*.stories.*'],
       'rules': {
         'i18next/no-literal-string': 'off'
       }

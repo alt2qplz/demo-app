@@ -4,7 +4,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 
 import ArticlesPage from './ArticlesPage';
 import { ArticleBlockType, ArticleType, ArticleView } from 'entities/Article/model/types/article';
-import { articlesPageReducer } from 'pages/ArticlesPage/model/slices/articlesPageSlice';
+import { articlesPageReducer } from '../../model/slices/articlesPageSlice';
 
 export default {
   title: 'pages/ArticlesPage',
